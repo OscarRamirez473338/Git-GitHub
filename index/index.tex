@@ -1,0 +1,195 @@
+%INPUT
+\documentclass[10pt, a4paper,ngerman]{article}
+\usepackage{babel}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, left=6mm,right=6mm, top=6mm, bottom=6mm]{geometry}
+\special{papersize=210mm,297mm}
+
+%MATHEMATIK
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{enumerate}
+\usepackage{esint}
+\usepackage{empheq}
+\usepackage{lmodern}
+\usepackage[thickspace,squaren,textstyle]{SIunits} 
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arccot}{arccot}
+
+%LAYOUT
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{float}
+\usepackage[margin=1cm, justification=centering, singlelinecheck=no,tablename=Tab., figurename=Abb.]{caption}
+\usepackage{comment}
+\usepackage{graphicx}
+%\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage{multicol}
+
+% BOLD
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\textcolor{violet}{\oldtextbf{#1}}}
+
+% ITALIC
+%\let\oldtextit\textit
+%\renewcommand{\textit}[1]{\textcolor{orange}{\oldtextit{#1}}}
+
+% COLORS
+\usepackage{sectsty}
+\chapterfont{\color{violet}}
+\sectionfont{\color{purple}}
+\subsectionfont{\color{blue}}
+\subsubsectionfont{\color{violet}}
+
+%BOXED
+\newcommand*{\boxedcolor}{red}
+\makeatletter
+\renewcommand{\boxed}[1]{
+  \textcolor{\boxedcolor}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}
+}
+
+%BOXED_COLORED
+\usepackage{tcolorbox}
+\definecolor{mycolor}{rgb}{0.122, 0.435, 0.698}
+\newtcbox{\boxi}{on line,
+  colframe=mycolor,colback=cyan!10!white,
+  boxrule=0.5pt,arc=1pt,boxsep=0pt,left=6pt,right=6pt,top=3pt,bottom=3pt}
+
+\usepackage{fancyhdr} 
+\fancypagestyle{style1}{
+  \fancyhf{}
+  \fancyhead[C]{style 1 with thin line}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+% \pagestyle{style2}
+\usepackage{lipsum}
+
+% LSTLISTINGS
+\usepackage{listings}
+
+% Code einbinden
+\lstset{numbers=left, numberstyle=\tiny, numbersep=10pt} \lstset{language=Java} 
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstdefinestyle{customasm}{§
+  belowcaptionskip=1\baselineskip,
+  frame=L,
+  xleftmargin=\ parindent,
+  language=[x86masm]Assembler,
+  basicstyle=\footnotesize\ttfamily,
+  commentstyle=\itshape\color{purple!40!black},
+}
+\lstset{escapechar=@,style=customc}
+
+% DOCUMENT
+\begin{document}
+\thispagestyle{empty}
+
+\begin{flushleft}
+  \textit{RAMÍREZ ROBAYO Oscar Mauricio}
+  \\
+  %\textcolor{blue}{|}
+  \textit{Digital Engineering Robotik \& Big Data}
+  \\
+  \textcolor{blue}{\textbf{\textit{Git und GitHub}}}
+  \\
+  \textcolor{violet}{{\rule{\paperwidth/2}{0.1pt}}}
+\end{flushleft}
+\section{Git}
+\%Username\\
+\texttt{\$ git config --global user.name ``Oscar Ramirez''}\\\\
+\%Mail\\
+\texttt{\$ git config --global user.email ``or473338@gmail.com''}\\\\
+\%Branches\\
+\texttt{\$ git config --gloal init.default branch main}\\\\
+\%Help \\
+\texttt{\$ git config -h}\\\\
+\%Command help\\
+\texttt{\$ git help config}\\\\
+\%Change Folder for repository\\
+\texttt{\$ cd c:/users/or473/OneDrive/Git-GitHub}\\\\
+\%Initialize empty git repository\\
+\texttt{\$ git init}\\\\
+\%Status of repository with untracked files in what will be committed\\
+\texttt{\$ git status}\\\\
+\%Add index.html for being committed\\
+\texttt{\$git add index.html}\\\\
+\%Remove index.html for being removed\\
+\texttt{\$ git rm --cached index.html}\\\\
+\%All files will be tracked\\
+\texttt{\$ git add .}\\\\
+\%First commit\\
+\texttt{\$ git commit -m ``First commit - committing all files to the repository''}\\\\
+\%Add and commit all files\\
+\texttt{\$ git commit -a -m ``updated the home.html site''}\\\\
+\%Show the difference between the old and the new file\\
+\texttt{\$ git diff}\\\\
+\%Deleting a file\\
+\texttt{\$ git rm ``home.html''}\\\\
+\%Restore a file\\
+\texttt{\$ git restore --staged ``home.html''}\\\\
+\%Recovering a file\\
+\texttt{\$ git restore ``home.html''}\\\\
+\%Rename a file\\
+\texttt{\$ git mv ``ReadMe.txt'' ``Leeme.txt''}\\\\
+\%Show log of all commits\\
+\texttt{\$ git log}\\\\
+\%Show log of all commits in one line\\
+\texttt{\$ git log --oneline}\\\\
+\%Correct the commit message\\
+\texttt{\$ git commit -m ``Fourth commit - renaming the file ReadMe.txt'' --amend}\\\\
+\%Jump back to a commit\\
+\texttt{\$ git reset 3a9d53a}\\\\
+\%Rebase all order of the commits
+\texttt{\$git rebase -i --root}\\\\
+\%Create a new branch\\
+\texttt{\$ git branch FixHome}\\\\
+\%See a list of all branches\\
+\texttt{\$ git branch}\\\\
+\%Change branch\\
+\texttt{\$ git switch FixHome}\\\\
+\%Merge a file back to a certain branch
+\texttt{\$ git merge -m ``Merge fixHome back to master'' FixHome}\\\\
+\%Delete a branch\\
+\texttt{\$ git branch -d FixHome}\\\\
+\%Create and switch to a branch\\
+\texttt{\$ git switch -c UpdateText}\\\\
+\%Merge updated text between branches, MERGING, deleting a branch in between\\
+\texttt{\$ git commit -a -m ``update text on index''}\\\\
+\section{GitHub}
+\texttt{git init}\\
+\texttt{git add README.md}\\
+\texttt{git commit -m "first commit"}\\
+\texttt{git branch -M main}\\
+\texttt{git remote add origin https://github.com/OscarRamirez473338/Git-GitHub.git}\\
+\texttt{git push -u origin main}\\\\
+Or push an existing repository from the command line\\
+\texttt{git remote add origin https://github.com/OscarRamirez473338/Git-GitHub.git}\\
+\texttt{git branch -M main}\\
+\texttt{git push -u origin main}\\
+\newpage
+\begin{center}
+  \includegraphics[scale=0.62]{../pngeggmejorada.png}
+\end{center}
+
+\end{document}
