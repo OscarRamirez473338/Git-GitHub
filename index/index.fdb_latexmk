@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1739478440.98068 "c:/Users/or473/OneDrive/infos/index/index.tex" "index.pdf" "index" 1739478443.70502 0
+["pdflatex"] 1739568774.36123 "c:/Users/or473/OneDrive/infos/index/index.tex" "index.pdf" "index" 1739568776.94237 0
   "../pngeggmejorada.png" 1739277246 16748 b9d783a7c165a43e5d854fe82212574a ""
   "C:/Users/or473/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1738283796 6737010 5cbace5fcac78e643b8ecb0044ffceb5 ""
   "C:/Users/or473/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1739148956 12806596 27a57e4898ab23d7fbd08913b1498f79 ""
@@ -160,9 +160,9 @@
   "C:/Users/or473/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/or473/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/or473/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/or473/OneDrive/infos/index/index.tex" 1739478439 5704 4c59ad3f400df0038f7158b3327fd54c ""
-  "index.aux" 1739478443 355 d1a7a10e0fdf3bed1727a217e81db34b "pdflatex"
-  "index.tex" 1739478439 5704 4c59ad3f400df0038f7158b3327fd54c ""
+  "c:/Users/or473/OneDrive/infos/index/index.tex" 1739568772 5702 fc3f8f30fc198ff8a28cff581c1bce6b ""
+  "index.aux" 1739568776 355 d1a7a10e0fdf3bed1727a217e81db34b "pdflatex"
+  "index.tex" 1739568772 5702 fc3f8f30fc198ff8a28cff581c1bce6b ""
   (generated)
   "index.aux"
   "index.log"
